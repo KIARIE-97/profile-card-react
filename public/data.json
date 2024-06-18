@@ -1,0 +1,47 @@
+{
+  "profiles":[ 
+    {
+    "name": "jennifer annistons",
+    "age": 50,
+    "picture": "https://hellogiggles.com/wp-content/uploads/sites/7/2020/01/13/rachel-green.jpg?quality=82&strip=all",
+    "bio": "Rachel Karen Green is a fictional character, one of the six main characters who appeared in the American sitcom Friends"
+  },
+  {
+    "name": "couterney cox",
+    "age": 54,
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvxRDzKtcZdtL8rK2kcSwyGSCM0C5HbB3N5g&s",
+    "bio": "Monica E. Geller is a fictional character, one of the six main characters who appears on the American sitcom Friends."
+  },
+  {
+    "name": "david schwimmer",
+    "age": 56,
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShbUdjC_cwQnB8IRy292ccHzA0o1YFxpK99Q&s",
+    "bio": "Ross Geller, portrayed by David Schwimmer, is one of the six main characters of the NBC sitcom Friends. Ross is considered by many to be the most intelligent member of the group and is noted for his goofy but lovable demeanor."
+  },
+  {
+    "name": "lisa kudrow",
+    "age": 56,
+    "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Friendsphoebe.jpg/220px-Friendsphoebe.jpg",
+    "bio": "Ross Geller, portrayed by David Schwimmer, is one of the six main characters of the NBC sitcom Friends. Ross is considered by many to be the most intelligent member of the group and is noted for his goofy but lovable demeanor."
+  },
+  {
+    "name": "matt le blanc",
+    "age": 55,
+    "picture": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSELhZ5E2mrTSMwJIo5D-od-4avXEwQGKZvh3lTl9ijYHw70Gj7Lq-MK8LEJpKjZSBtdKRO29K0z_K1VYATWBnUMx8iUk0DERHZ5p16bNY",
+    "bio": "Joseph Francis Tribbiani Jr. is a fictional character, serving as one of the primary characters of the NBC sitcom Friends and the protagonist of its spin-off Joey. He is portrayed by Matt LeBlanc in both series."
+  
+  },
+    {
+    "name": "matthew perry",
+    "age": 56,
+    "picture": "https://compote.slate.com/images/91be9201-72a5-4de4-950c-1854c6e09a47.jpeg?crop=1560%2C1040%2Cx0%2Cy0&width=840",
+    "bio": "Chandler Muriel Bing is a fictional character from the NBC sitcom Friends, portrayed by Matthew Perry. Chandler was born to Nora Tyler Bing, an erotic romance novelist, and Charles Bing, a gay female impersonator and star of a Las Vegas drag show called Viva Las Gay-gas as Helena Handbasket."
+  },
+  {
+    "name": "antony wainaina",
+    "age": 22,
+    "picture": "https://img.freepik.com/premium-photo/anime-characters-forest_889073-1541.jpg",
+    "bio": "Tony is a cosmetology at the university of nairobi😊. He is a very hardworking and determined person. He also works as a part time model. He is a very social person and loves to make new friends. He is also a very good cook ❤️. He is a very good listener and loves to help people 😎🤪."
+  }
+]
+}

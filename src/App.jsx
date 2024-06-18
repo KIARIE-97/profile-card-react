@@ -1,35 +1,44 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Profile from './components/Profile'
+// import profiles from './data.json'
+// import profilePicture from './assets/images/picture.JPG'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  const [profiles, setProfile] = useState(null);
+
+  useEffect(() => {
+    fetch('/data.json')
+      .then(response => response.json())
+      .then(data => {setProfile(data.profiles);
+      console.log(data.profiles);  // Log the profiles data
+      })
+      
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
+  if (!profiles) {
+    return <div>Loading...</div>; // Optionally show a loading state
+  }
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+ 
+        <div className="app">
+      {profiles.map((profile,index) => (
+        <Profile
+          key={index}
+          name={profile.name}
+          age={profile.age}
+          picture={profile.picture}
+          bio={profile.bio}
+        />
+      ))}
+      
+    </div>
+    
+  );
 }
 
 export default App
