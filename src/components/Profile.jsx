@@ -2,12 +2,12 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import './profile.css'
 
-function Profile({name, age, picture, bio}) {
+function Profile({name, age, picture, bio, onClick}) {
 
 
   return (
     <> 
-    <div className="container">
+    <div className="container" onClick={onClick}>
       
     <div className="card">
     <div className="img">

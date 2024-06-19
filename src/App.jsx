@@ -5,11 +5,13 @@ import Profile from './components/Profile'
 // import profiles from './data.json'
 // import profilePicture from './assets/images/picture.JPG'
 import './App.css'
-// https://img.freepik.com/premium-photo/anime-characters-forest_889073-1541.jpg
+
 
 function App() {
   
-  const [profiles, setProfile] = useState(null);
+  const [profiles, setProfile] = useState([]);
+  const [selectedProfile, setSelectedProfile] = useState(null);
+
 
   useEffect(() => {
     fetch('/data.json')
@@ -19,7 +21,15 @@ function App() {
       })
       
       .catch(error => console.error('Error fetching data:', error));
-  }, []);
+  }, []);// The empty array causes this effect to run once, after the first render
+
+const handleProfileClick = (profile) => {
+    setSelectedProfile(profile);
+  };
+
+  const handleClearSelectedProfile = () => {
+    setSelectedProfile(null);
+  };
 
   if (!profiles) {
     return <div>Loading...</div>; // Optionally show a loading state
@@ -28,16 +38,28 @@ function App() {
   return (
  
         <div className="app">
-      {profiles.map((profile,index) => (
-        <Profile
-          key={index}
-          name={profile.name}
-          age={profile.age}
-          picture={profile.picture}
-          bio={profile.bio}
-        />
-      ))}
-      
+          {selectedProfile ? (
+            <div className='selected'>
+              <button onClick={handleClearSelectedProfile}>Back</button>
+              <Profile
+                name={selectedProfile.name}
+                age={selectedProfile.age}
+                picture={selectedProfile.picture}
+                bio={selectedProfile.bio}
+                onClick={() => {}}
+              />
+            </div>
+          ): ( profiles.map((profile,index) => (
+            <Profile
+              key={index}
+              name={profile.name}
+              age={profile.age}
+              picture={profile.picture}
+              bio={profile.bio}
+              onClick={() => handleProfileClick(profile)}
+            />
+          )))
+    }
     </div>
     
   );
