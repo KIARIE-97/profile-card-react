@@ -1,7 +1,10 @@
 import React from 'react'
+import { useState,useEffect } from 'react'
 import './profile.css'
 
 function Profile({name, age, picture, bio}) {
+
+
   return (
     <> 
     <div className="container">

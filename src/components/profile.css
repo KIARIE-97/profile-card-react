@@ -32,10 +32,10 @@ body{
     background-color: #b24b85;
     /* transform: rotate3d(1, 1, 1, 10deg); */
 }
-/* .card :hover{
-    transform: rotateX(10deg) rotateY(10deg) rotateZ(10deg);
-    transition: transform 0.5s;
- } */
+.card :hover{
+   transform: scaley(1.1) scalex(1.1);
+   transition: transform 1s;
+}
  .img{
     display: flex;
     flex-direction: row;
